@@ -1,0 +1,73 @@
+<html>
+<head>
+ 
+  <script>
+   function convert(){
+       
+        var from = document.getElementById("cfrom").value;
+        var to = document.getElementById("cto").value;
+        var input =document.getElementById("value").value;
+        var result=document.getElementById("result");
+        var output = -1;
+        if (from == to) {
+          alert("check your from & to values");
+        }
+        if (from == 'KB' && to == 'B') {
+          output = input*1024;
+        }else if (from == 'B' && to == 'KB') {
+          output = input/1024;
+        }  else if (from == 'KB' && to == 'MB') {
+          output = input*0.0009765625;
+        } else if (from == 'MB' && to == 'KB') {
+          output = input/0.0009765625;
+        }else if (from == 'KB' && to == 'GB') {
+          output = ((+input) * (1*Math.pow(10,-6)))
+        }else if (from == 'GB' && to == 'KB') {
+          output = ((+input) /(1*Math.pow(10,-6)))
+        } else if (from == 'KB' && to == 'TB') {
+          output = ((+input) * (1*Math.pow(10,-9)))
+        }else if (from == 'TB' && to == 'KB') {
+          output = ((+input) / (1*Math.pow(10,-9)))
+        }else if (from == 'KB' && to == 'PB') {
+          output = ((+input) * (1*Math.pow(10,-12)))
+        } else if (from == 'PB' && to == 'KB') {
+          output = ((+input) /(1*Math.pow(10,-12)))
+        } else if (from == 'Centemeters' && to == 'Millimeters') {
+          output = ((+input) * (10))
+        } else if (from == 'Centemeters' && to == 'Meters') {
+          output = ((+input) / (100))
+        } else if (from == 'Meters' && to == 'Centemeters') {
+          output = ((+input) * (100))
+        }
+        // 2 kilometers = 2000 meters
+        output = input + " " + from + " = " + output + " " + to
+        result.innerHTML=output;
+      }
+  </script>
+</head>
+
+<body>
+
+  Convert From :
+  <select id="cfrom">
+    <option selected="selected"> KB </option>
+    <option> B</option>
+    <option> MB</option>
+    <option> GB</option>
+    <option> TB</option>
+    <option> PB</option>
+  </select><br><br> Convert To :
+  <select id="cto">
+    <option selected="selected"> KB</option>
+    <option> B</option>
+    <option> MB</option>
+    <option> GB</option>
+    <option> TB</option>
+    <option> PB</option>
+  </select><br><br> Value:
+  <input type="text" name="number" id="value"></input><br><br>
+  <button id="btn" onclick="convert()"> Convert </button>
+  <p id="result"></p>
+</body>
+
+</html>

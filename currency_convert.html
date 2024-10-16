@@ -1,0 +1,77 @@
+<!doctype html>
+<HTML>
+<head>
+   <title>Currency Converter in JavaScript</title>
+</head>
+<body bgcolor="yellow";>
+   <h1>Currency Converter</h1>
+   <p > Select Currency and enter Amount to convert.</p>
+   <form>
+      <label>From:</label>
+      <select id="from">
+         <option value="USD">USD</option>
+         <option value="EUR">EUR</option>
+         <option value="INR">INR</option>
+      </select>
+      <label>To:</label>
+      <select id="to">
+         <option value="USD">USD</option>
+         <option value="EUR">EUR</option>
+         <option value="INR">INR</option>
+      </select>
+      <label>Amount:</label>
+      <input type="text" id="amount" />
+      <button type="button" onclick="operation()">Convert</button>
+      <p id="result"></p>
+   </form>
+   <script>
+    
+
+      var result = document.getElementById("result");
+      var res=document.getElementById("result");
+      function operation()
+      { 
+        var from= document.getElementById("from").value;
+        var to = document.getElementById("to").value;
+        var amount = document.getElementById("amount").value;
+       
+        if(from=="USD" && to=="USD")
+        {
+         res.innerHTML=amount+" USD ="+amount*1+" USD";
+        }
+        else if(from=="USD" && to=="EUR")
+        {
+         res.innerHTML=amount+" USD ="+amount*0.95+" EUR";
+        }
+        else if(from=="USD" && to=="INR")
+        {
+         res.innerHTML=amount+" USD ="+amount*81.50+" INR";
+        }
+        else if(from=="EUR" && to=="USD")
+        {
+         res.innerHTML=amount+" EUR ="+amount*1.05+" USD";
+        }
+        else if(from=="EUR" && to=="EUR")
+        {
+         res.innerHTML=amount+" EUR ="+amount*1+" EUR";
+        }
+        else if(from=="INR" && to=="USD")
+        {
+         res.innerHTML=amount+" INR ="+amount*0.0123+" USD";
+        }
+        else if(from=="INR" && to=="EUR")
+        {
+         res.innerHTML=amount+" INR ="+amount*0.0117+" EUR";
+        } 
+        else if(from=="EUR" && to=="INR")
+        {
+         res.innerHTML=amount+" EUR ="+amount*85.8+" INR";
+        }
+        else if(from=="INR" && to=="INR")
+        {
+         res.innerHTML=amount+" INR ="+amount*1+" INR";
+        } 
+      }
+   </script>
+</body>
+</html>

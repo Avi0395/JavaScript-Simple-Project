@@ -1,0 +1,106 @@
+<html>
+    <head>
+       <title>Mass Converter in JavaScript</title>
+    </head>
+    <body bgcolor="solid black";>
+       <h1>Mass Converter</h1>
+       <p >  enter Amount to convert</p>
+       <form>
+          From:
+          <select id="from">
+             <option value="ton">ton</option>
+             <option value="quintal">quintal</option>
+             <option value="killogram">killogram</option>
+             <option value="gram">gram</option>
+          </select>
+          To:
+          <select id="to">
+             <option value="ton">ton</option>
+             <option value="quintal">quintal</option>
+             <option value="killogram">killogram</option>
+             <option value="gram">gram</option>
+          </select>
+          Amount:<input type="text" id="amount" />
+          <button type="button" onclick="operation()">Convert</button>
+          <p id="result"></p>
+       </form>
+       <script>
+        
+    
+          var result = document.getElementById("result");
+          var res=document.getElementById("result");
+          function operation()
+          { 
+            var from= document.getElementById("from").value;
+            var to = document.getElementById("to").value;
+            var amount = document.getElementById("amount").value;
+           
+            if(from=="ton" && to=="ton")
+            {
+             res.innerHTML=amount+" ton ="+amount*1+" ton";
+            }
+            if(from=="ton" && to=="quintal")
+            {
+             res.innerHTML=amount+" ton ="+amount*10+" ton";
+            }
+    
+            else if(from=="ton" && to=="killogram")
+            {
+             res.innerHTML=amount+" ton ="+amount*1000+" killogram";
+            }
+            else if(from=="ton" && to=="gram")
+            {
+             res.innerHTML=amount+" ton ="+amount*1000000+" gram";
+            }
+            if(from=="quintal" && to=="ton")
+            {
+             res.innerHTML=amount+" quintal ="+amount*0.1+" ton";
+            }
+            if(from=="quintal" && to=="quintal")
+            {
+             res.innerHTML=amount+" quintal ="+amount*1+" quintal";
+            }
+            if(from=="quintal" && to=="killogram")
+            {
+             res.innerHTML=amount+" quintal ="+amount*100+" killogram";
+            }
+            if(from=="quintal" && to=="gram")
+            {
+             res.innerHTML=amount+" quintal ="+amount*100000+" gram";
+            }
+            else if(from=="killogram" && to=="ton")
+            {
+             res.innerHTML=amount+" killogram ="+amount*0.001+" ton";
+            }
+            if(from=="killogram" && to=="quintal")
+            {
+             res.innerHTML=amount+" killogram ="+amount*0.01+" quintal";
+            }
+            else if(from=="killogram" && to=="killogram")
+            {
+             res.innerHTML=amount+" killogram ="+amount*1+" killogram";
+            }
+            else if(from=="killogram" && to=="gram")
+            {
+             res.innerHTML=amount+" killogram ="+amount*1000+" gram";
+            }
+            else if(from=="gram" && to=="killogram")
+            {
+             res.innerHTML=amount+" gram ="+amount*0.001+" killogram";
+            } 
+            else if(from=="gram" && to=="ton")
+            {
+             res.innerHTML=amount+" gram ="+amount*0.000001+" ton";
+            }
+            else if(from=="gram" && to=="gram")
+            {
+             res.innerHTML=amount+" gram ="+amount*1+" gram";
+            } 
+            if(from=="gram" && to=="quintal")
+            {
+             res.innerHTML=amount+" gram ="+amount*0.00001+" quintal";
+            }
+          }
+       </script>
+    </body>
+    </html>

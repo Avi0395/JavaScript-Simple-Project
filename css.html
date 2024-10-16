@@ -1,0 +1,159 @@
+<html>
+<style>
+ul.n {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position:sticky;
+}
+
+li{
+float:left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+#about{
+float:right;
+}
+       
+      .container{
+         display:flex;
+         align:left;
+         
+         }
+      .text {
+        font-size: 20px;
+        padding-left: 20px;
+        text-align: left;
+        font-family:Bahnschrift;
+      }
+     .t1{
+        width:100%;
+        font-size: 20px;
+        padding-left: 20px;
+        text-align: right;
+        font-family:comic sans MS;
+
+      }
+ .t2{
+        width:100%;
+        font-size: 20px;
+        padding-left: 20px;
+        text-align: right;
+        font-family:Consolas;
+
+      }
+ .container2{
+         width=100%;
+         display:flex;
+         align:right;
+         
+         }
+.un{
+
+text-align:right;
+}
+ .text1 {
+        font-size: 20px;
+        padding-left: 100px;
+        text-align: right;
+        padding-right: 20px;
+        font-family:Bahnschrift;
+      }
+.contact{
+font-family:Courier New;
+}
+</style>
+
+<body>
+<ul class="n">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="frame.html" target="blank">CONVERTER</a></li>
+  <li><a href="#coform">Feedback</a></li>
+  <li id="about"><a href="#about">About</a></li>
+</ul>
+<br><br>
+      <div class="container">
+      <div class="image">
+        <img src="cur.png" >
+      </div>
+      <div class="text">
+        <center class="t1"><h1>ABOUT CURRENCY CONVERTER</h1></center>
+        <br>
+        <h3>IT SUPPORTS:</h3>
+        <ul>
+        <h2>USD TO INR || INR TO USR</h2>
+        <h2>USD TO EUR || INR TO EUR</h2>
+        <h2>USR TO INR || USR TO USD</h2>
+        <ul>
+      </div>
+    </div>
+ <br>
+ <br>
+ <br>
+ <br>
+      <div class="container2">
+    <colgroup>
+<col s> <div class="text1">
+        <center class="t2"><h1>ABOUT UNIT CONVERTER</h1></center>
+        <br>
+        <h3>IT SUPPORTS:</h3>
+        <ul>
+        <h2>KILOMETER, INCHES</h2>
+        <h2>MILES, MILIMETER</h2>
+        <h2>SENTIMETER CONVERSION</h2>
+        <ul>
+      </div></col>
+<col > <img src="un.jpg" class="un"></col>
+   </colgroup>   
+    </div>
+ <br>
+ <br>
+ <br>
+ <br>
+<div class="container">
+      <div class="image">
+        <img src="mass.png" >
+      </div>
+      <div class="text">
+        <center class="t1"><h1>ABOUT MASS CONVERTER</h1></center>
+        <br>
+        <h3>IT SUPPORTS:</h3>
+        <ul>
+        <h2>TON</h2>
+        <h2>QUINTAL, KILOGRAM</h2>
+        <h2>GRAM</h2>
+        <h2>CONVERSION</h2>
+        <ul>
+      </div>
+    </div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <form id="coform">
+ <h1 class="contact">CONTACT</h1>
+ NAME:<input type="text" id="name" placeholder="Name"><br>
+ FEEDBACK:<br>
+ <textarea cols="50" rows="20" placeholder="Feedback"></textarea>
+ <br><br>
+ <input type="button"value="submit">
+ </form>
+</body>
+
+</html>
